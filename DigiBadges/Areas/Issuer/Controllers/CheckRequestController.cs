@@ -126,7 +126,7 @@ namespace DigiBadges.Areas.Issuer.Controllers
                 var user = _user.FindById(a.UserId.ToString());
                 var pathstep = _pathwaySteps.FindById(a.PathwayStepId.ToString());
                 var bdge = _badge.FindById(pathstep.GetBadges);
-                var urlOfImage = "https://digibadgewebapp.azurewebsites.net/" + bdge.ImageUrl.Replace('\\', '/');
+                var urlOfImage = "http://digibadge.eastus.cloudapp.azure.com/" + bdge.ImageUrl.Replace('\\', '/');
                 await _emailSender.SendEmailAsync(user.Email,
                     "Congratulations You are awarded a badge",
                                        $"<div class='p-6 m-3 border rounded row' style='background-color:beige'>" +
