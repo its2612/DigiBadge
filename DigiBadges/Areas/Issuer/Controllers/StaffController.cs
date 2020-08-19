@@ -162,7 +162,7 @@ namespace DigiBadges.Areas.Issuer.Controllers
                     //send the email to the created staff 
                     await _emailSender.SendEmailAsync(staff.Users.Email,
                                    "Congratulation, you are invited as a staff",
-                                   $"<h3 style = 'color:blueviolet' >Congratulation, you are invited.. for login</h3><div class='text-center'><a class='btn btn-secondary' href='https://digibadges.azurecr.io/Auth/Login'>Login your Account</a></div><br />" +
+                                   $"<h3 style = 'color:blueviolet' >Congratulation, you are invited.. for login</h3><div class='text-center'><a class='btn btn-secondary' href='https://digibadgewebapp.azurewebsites.net/Auth/Login'>Login your Account</a></div><br />" +
                                    $"" +
                                    $"<br/><h2>Your id - {staff.Users.Email}</h2><br/><h2>Your Password - {"Welcome@123"}</h2><br/></div><div class='col-3'></div></div>"
                                  );
@@ -218,16 +218,16 @@ namespace DigiBadges.Areas.Issuer.Controllers
                     }
 
                     issuerModel1.UserId = new ObjectId(userid);
-                    SolrIssuersModel sissuser = new SolrIssuersModel(issuerModel1);
-                    _solrIssuer.Add(sissuser);
-                    _solrIssuer.Commit();
+                   // SolrIssuersModel sissuser = new SolrIssuersModel(issuerModel1);
+                    //_solrIssuer.Add(sissuser);
+                    //_solrIssuer.Commit();
 
 
                     //send email to the created staff
                     await _emailSender.SendEmailAsync(staff.Users.Email,
                                                 "Congratulation, you are invited as a staff",
 
-                                                 $"<h3 style = 'color:blueviolet' >Congratulation, you are invited.. for login</h3><div class='text-center'><a class='btn btn-secondary' href='https://digibadges.azurecr.io/Auth/Login'>Login your Account</a></div><br />" +
+                                                 $"<h3 style = 'color:blueviolet' >Congratulation, you are invited.. for login</h3><div class='text-center'><a class='btn btn-secondary' href='https://digibadgewebapp.azurewebsites.net/Auth/Login'>Login your Account</a></div><br />" +
                                                  $"" +
                                                  $"<br/><h2>Your id - ${staff.Users.Email}</h2><br/><h2>Your Password - ${"Welcome@123"}</h2><br/></div><div class='col-3'></div></div>"
                                                );
