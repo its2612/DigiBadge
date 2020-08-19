@@ -238,7 +238,7 @@
                                 <hr />
                                 @if (item.IsExpired == false)
                                 {
-                           var urlOfImage = "https://digibadgewebapp.azurewebsites.net/" + item.ImageUrl.Replace('\\', '/');
+                           var urlOfImage = "http://digibadge.eastus.cloudapp.azure.com/" + item.ImageUrl.Replace('\\', '/');
                                     <a data-href="https://digibadgewebapp.azurewebsites.net/" data-layout="button_count" data-size="small">
                                         <a title="share badge on facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=@urlOfImage">
                                             Share the badge
