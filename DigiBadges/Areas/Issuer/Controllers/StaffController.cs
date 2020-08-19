@@ -155,9 +155,9 @@ namespace DigiBadges.Areas.Issuer.Controllers
                     }
 
                     issuerModelnew.UserId = new ObjectId(userid);
-                    SolrIssuersModel sissuser = new SolrIssuersModel(issuerModelnew);
-                    _solrIssuer.Add(sissuser);
-                    _solrIssuer.Commit();
+            //        SolrIssuersModel sissuser = new SolrIssuersModel(issuerModelnew);
+              //      _solrIssuer.Add(sissuser);
+                //    _solrIssuer.Commit();
 
                     //send the email to the created staff 
                     await _emailSender.SendEmailAsync(staff.Users.Email,
